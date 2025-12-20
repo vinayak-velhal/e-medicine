@@ -1,0 +1,23 @@
+.tracker-container {
+  display: flex;
+  align-items: center;
+}
+
+.tracker-step {
+  display: flex;
+  align-items: center;
+}
+
+.tracker-circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 3px solid #ccc;
+}
+
+.tracker-line {
+  width: 50px;
+  height: 3px;
+  background: #ccc;
+  border-radius: 10px;
+}

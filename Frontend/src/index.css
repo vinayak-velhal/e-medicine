@@ -1,0 +1,90 @@
+html body{
+  background-color: #FAFAFA;
+  background: url("./assets/Background_Image.jpg")
+    no-repeat center center;
+  background-size: cover;
+  /* color: #11223a; */
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#imageDiv {
+  width:100%;
+  height:350px;
+  background-size: cover;
+  position: relative;
+  overflow:hidden;
+}
+
+#frontPageImage {
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+
+#imgText {
+  color: #1C375C;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.welcomeText {
+  color: #1C375C;
+  position: absolute;
+  top: 85%;
+  left: 27%;
+  transform: translate(-50%, -50%);
+}
+
+.welcomeText h2, #AdminWelcomeText {
+  font-family: 'Montserrat', sans-serif;
+  color: hsla(240, 80%, 30%, 0.856);
+}
+
+#AdminText, #AdminText h2 {
+  color: black;
+}
+
+#fontPage #card {
+  height: 168px;
+  width: 261px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* Medicine Display for the customer */
+#medicineDiv {
+  width:100%;
+  height:200px;
+  overflow:hidden;
+}
+
+#medicineImg {
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+
+#manufacturerDiv {
+  width: 262px;
+  height: 24px;
+  overflow: hidden;
+}
+
+#manufacturerName {
+  width:100%;
+  height:100%;
+}

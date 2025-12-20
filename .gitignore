@@ -1,0 +1,57 @@
+# FRONTEND (React + Vite)
+
+# Logs
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# Dependency directories
+frontend/node_modules/
+
+# Vite build output
+frontend/dist/
+
+# Local env files
+frontend/.env
+frontend/.env.local
+frontend/.env.*.local
+
+# Vite cache
+frontend/.vite/
+
+# Editor folders
+frontend/.vscode/
+frontend/.idea/
+
+# BACKEND (ASP.NET Core)
+
+# Build output
+backend/bin/
+backend/obj/
+
+# User-specific files
+backend/*.user
+backend/*.suo
+backend/*.userprefs
+
+# IIS Express files
+backend/.vs/
+backend/.vscode/
+backend/.idea/
+
+# Configuration secrets (even if you don’t have secrets now)
+backend/appsettings.Development.json
+backend/appsettings.Local.json
+
+# GENERAL IGNORES FOR ROOT FOLDER
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.local
