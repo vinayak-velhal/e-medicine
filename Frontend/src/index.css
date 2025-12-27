@@ -1,6 +1,6 @@
 html body{
   background-color: #FAFAFA;
-  background: url("./assets/Background_Image.jpg")
+  background: url("/Background_Image.jpg")
     no-repeat center center;
   background-size: cover;
   /* color: #11223a; */

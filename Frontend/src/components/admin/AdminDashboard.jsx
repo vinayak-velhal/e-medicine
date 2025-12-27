@@ -9,7 +9,7 @@ export default function AdminDashboard() {
       <AdminHeader />
             <div className="container-fluid my-2">
         <div id="imageDiv" className="image-container">
-          <img id="frontPageImage" src="./src/assets/FrontPage_Background_Image2.jpg"/>
+          <img id="frontPageImage" src="/FrontPage_Background_Image.jpg"/>
           <div id="imageText" className="image-text text-dark">
             <div id="imgText">
               <div className="text-center">

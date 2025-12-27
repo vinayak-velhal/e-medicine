@@ -10,7 +10,10 @@ export default function Header() {
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <div className="container-fluid">
         <span className="navbar-brand" style={{cursor:'pointer'}} onClick={()=>navigate('/dashboard')}><FaCapsules className="mb-1 me-1"/>E-Medicine</span>
-        <div className="collapse navbar-collapse">
+        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav me-auto">
             <li className="nav-item"><span className="nav-link fw-semibold text-light" style={{cursor:'pointer'}} onClick={()=>navigate('/dashboard')}>Home</span></li>
             <li className="nav-item"><span className="nav-link fw-semibold text-light" style={{cursor:'pointer'}} onClick={()=>navigate('/products')}>Products</span></li>
