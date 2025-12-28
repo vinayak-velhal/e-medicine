@@ -50,6 +50,34 @@ export default function MedicineDisplay() {
     m.name.toLowerCase().includes(search.toLowerCase())
   );
 
+// BLOCK + and -
+function handleQtyKeyDown(e) {
+  if (e.key === "-" || e.key === "+") e.preventDefault();
+}
+
+// HANDLE TYPING
+function handleQtyChange(e, id, setQty) {
+  const val = e.target.value;
+
+  if (val === "") {
+    setQty((q) => ({ ...q, [id]: "" }));
+    return;
+  }
+
+  const num = parseInt(val);
+  if (!isNaN(num)) {
+    setQty((q) => ({ ...q, [id]: num }));
+  }
+}
+
+// FIX VALUE ON BLUR
+function handleQtyBlur(id, setQty) {
+  setQty((q) => ({
+    ...q,
+    [id]: q[id] < 1 || q[id] === "" ? 1 : q[id],
+  }));
+}
+
   return (
     <div>
       <Header />
@@ -85,7 +113,15 @@ export default function MedicineDisplay() {
                     <p className="text-danger m-0 fw-medium text-opacity-75">Discount: {m.discount} Rs.</p>
                   </div>
                   <div className="d-flex gap-2">
-                    <input type="number" min="1" className="form-control" value={qty[m.id]||1} onChange={e=>setQty(q=>({...q,[m.id]:parseInt(e.target.value)||1}))} />
+                    <input
+                      type="number"
+                      min="1"
+                      className="form-control"
+                      value={qty[m.id] ?? ""}
+                      onKeyDown={handleQtyKeyDown}
+                      onChange={(e) => handleQtyChange(e, m.id, setQty)}
+                      onBlur={() => handleQtyBlur(m.id, setQty)}
+                    />
                     <button className="btn btn-primary w-100" onClick={()=>addToCart(m)}>Add to Cart</button>
                   </div>
                 </div>

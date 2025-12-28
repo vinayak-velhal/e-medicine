@@ -45,7 +45,7 @@ export default function Cart() {
       <Header />
       <div className="container mt-3">
         <h3 className='text-center'><FaCartPlus className="mb-2 me-1"/>My Cart</h3>
-        {cart.length === 0 ? <div>
+        {cart.length === 0 ? <div className="table-responsive">
           <table className="table table-bordered text-center">
             <thead className="table-success">
               <tr>
@@ -59,6 +59,7 @@ export default function Cart() {
             </thead>
             <tbody><tr><td colSpan={6}>No items in cart</td></tr></tbody>
           </table></div> : (
+          <div className="table-responsive">
           <table className="table table-bordered text-center">
             <thead className="table-success">
               <tr>
@@ -83,6 +84,7 @@ export default function Cart() {
               ))}
             </tbody>
           </table>
+          </div>
         )}
         <div className='d-flex flex-column align-items-end'>
           <h5 className='bg-light rounded p-2'>Total: {total} Rs.</h5>

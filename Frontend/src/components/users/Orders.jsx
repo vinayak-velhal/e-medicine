@@ -56,7 +56,7 @@ export default function Orders() {
         <h3 className='text-center'><GiCheckMark className='mb-2 me-1' />My Orders</h3>
 
         {orders.length === 0 ? (
-          <div>
+        <div className="table-responsive">
           <table className="table table-bordered text-center">
             <thead className="table-success"><tr>
                 <th>Order No</th>
@@ -68,8 +68,9 @@ export default function Orders() {
               </tr></thead>
             <tbody><tr><td colSpan={6}>No orders found</td></tr></tbody>
           </table>
-          </div>
+        </div>
         ) : (
+        <div className="table-responsive">
           <table className="table table-bordered text-center">
             <thead className="table-success">
               <tr>
@@ -116,6 +117,7 @@ export default function Orders() {
               ))}
             </tbody>          
           </table>
+        </div>
         )}
       </div>
     </div>

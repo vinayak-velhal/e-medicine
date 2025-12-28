@@ -1,4 +1,5 @@
 html body{
+  min-height: 100vh;
   background-color: #FAFAFA;
   background: url("/Background_Image.jpg")
     no-repeat center center;
@@ -22,16 +23,11 @@ code {
 
 #imageDiv {
   width:100%;
-  height:350px;
+  height: 55vh;
+  background: url("/FrontPage_Background_Image.jpg") no-repeat center center;
   background-size: cover;
   position: relative;
   overflow:hidden;
-}
-
-#frontPageImage {
-  width:100%;
-  height:100%;
-  object-fit:contain;
 }
 
 #imgText {
@@ -59,10 +55,56 @@ code {
   color: black;
 }
 
-#fontPage #card {
-  height: 168px;
-  width: 261px;
+.frontPageCards .card {
+  margin: 0 auto;
   background: rgba(255, 255, 255, 0.8);
+}
+
+#adminCards .card {
+  width: 320px;
+}
+
+
+@media (max-width: 767px) {
+  #imageDiv {
+    background: url("/FrontPage_Background_Image2.jpg") no-repeat center center;
+    background-size: cover;
+  }
+
+  #imgText {
+    text-align: left;
+    font-size: 0.9rem;
+    top: 30%;
+    left: 32%;
+  }
+
+  #imageTex #imgText h3 {
+    margin-bottom: 0;
+  }
+
+  .welcomeText {
+    width: 300px;
+    font-size: 0.8rem;
+    top: 65%;
+    left: 45%;
+  }
+
+  .image-container a {
+    font-size: 0.8rem;
+    padding: 3px 6px;
+    margin-bottom: 20px;
+  }
+
+  .image-container .welcomeText h2 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+
+  .frontPageCards .card, #adminCards .card {
+    height: 168px;
+    width: 261px;
+    margin-bottom: 10px;
+  }
 }
 
 /* Medicine Display for the customer */

@@ -100,7 +100,7 @@ export default function Medicine() {
         </form>
 
         <h4 className="mt-4 text-center bg-light rounded-pill p-1"><GiMedicines className="mb-2 me-1" />Current Medicines</h4>
-        {medicines.length === 0 ? <div>
+        {medicines.length === 0 ? <div className="table-responsive">
           <table className="table table-bordered text-center">
             <thead className="table-success">
               <tr>
@@ -116,6 +116,7 @@ export default function Medicine() {
             </thead>
             <tbody><tr><td colSpan={8}>No medicines to display</td></tr></tbody>
           </table></div> : (
+        <div className="table-responsive">
         <table className="table table-bordered text-center">
           <thead className="table-success">
             <tr>
@@ -146,6 +147,7 @@ export default function Medicine() {
             ))}
           </tbody>
         </table>
+        </div>
         )}
       </div>
     </div>

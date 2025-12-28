@@ -58,7 +58,7 @@ export default function AdminOrders() {
       <AdminHeader />
       <div className="container mt-3">
         <h3 className='text-center'><GiCheckMark className='mb-2 me-1' />All Orders</h3>
-        {orders.length === 0 ? <div>
+        {orders.length === 0 ? <div className="table-responsive">
           <table className="table table-bordered text-center">
             <thead className="table-success"><tr>
               <th>Customer</th>
@@ -70,6 +70,7 @@ export default function AdminOrders() {
             </tr></thead>
             <tbody><tr><td colSpan={6}>No orders found</td></tr></tbody>
           </table></div> : (
+        <div className="table-responsive">
         <table className="table table-bordered text-center">
           <thead className="table-success">
             <tr>
@@ -113,6 +114,7 @@ export default function AdminOrders() {
             ))}
           </tbody>        
         </table>
+        </div>
         )}
       </div>
     </div>
