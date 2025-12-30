@@ -29,6 +29,18 @@ export default function MedicineDisplay() {
     const userId = getUserId();
     if (!userId) { alert('Please login'); return; }
     const quantity = qty[m.id] || 1;
+
+    // Stock Validation
+    if (m.quantity <=0) {
+      alert("This medicine is OUT OF STOCK");
+      return;
+    }
+
+    if (quantity > m.quantity) {
+      alert(`Only ${m.quantity} items available in stock`);
+      return;
+    }
+
     const payload = {
       UserId: userId,
       MedicineID: m.id,
@@ -108,21 +120,26 @@ function handleQtyBlur(id, setQty) {
                   <div id='manufacturerDiv' className='m-0 p-0'>
                     <p id='manufacturerName' className="card-text mb-3">Manufacturer: {m.manufacturer}</p>
                   </div>
-                  <div className="d-flex gap-5 mb-2">
+                  <div className="d-flex gap-5">
                     <p className="card-text m-0">Price: {m.unitPrice} Rs.</p>
                     <p className="text-danger m-0 fw-medium text-opacity-75">Discount: {m.discount} Rs.</p>
                   </div>
+                  {m.quantity <= 0 ? (
+                    <p className="mb-2 small text-danger">OUT OF STOCK</p>
+                  ) : ""}
                   <div className="d-flex gap-2">
                     <input
                       type="number"
                       min="1"
                       className="form-control"
+                      disabled={m.quantity <= 0}
                       value={qty[m.id] ?? ""}
                       onKeyDown={handleQtyKeyDown}
                       onChange={(e) => handleQtyChange(e, m.id, setQty)}
                       onBlur={() => handleQtyBlur(m.id, setQty)}
                     />
-                    <button className="btn btn-primary w-100" onClick={()=>addToCart(m)}>Add to Cart</button>
+                    <button className="btn btn-primary w-100" 
+                    disabled={m.quantity <= 0} onClick={()=>addToCart(m)}>Add to Cart</button>
                   </div>
                 </div>
               </div>

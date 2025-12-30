@@ -57,12 +57,12 @@ export default function Medicine() {
         <h3 className='text-center'><MdOutlineBrowserUpdated className="mb-1 me-1" size={30} />Add / Update Medicine</h3>
         <form className="bg-light bg-opacity-50 p-4 border border-secondary border-opacity-75 rounded" onSubmit={save}>
           <div className="row row-cols-2">
-            <div className="col-4">
+            <div className="col-12 col-md-4">
               <label className="form-label fw-semibold" htmlFor="Name">Name of medicine</label>
               <input className="form-control mb-2 bg-light bg-opacity-75 border border-secondary border-opacity-75"
               type="Name" placeholder="Name" value={form.name} onChange={e => onChange('name', e.target.value)} />
             </div>
-            <div className="col-4">
+            <div className="col-12 col-md-4">
               <label className="form-label fw-semibold" htmlFor="manufacturer">Name of manufacturer</label>
               <input className="form-control mb-2 bg-light bg-opacity-75 border border-secondary border-opacity-75"
               type="manufacturer" placeholder="Manufacturer" value={form.manufacturer} onChange={e => onChange('manufacturer', e.target.value)} />
@@ -72,12 +72,12 @@ export default function Medicine() {
               <input className="form-control mb-2 bg-light bg-opacity-75 border border-secondary border-opacity-75"
               type="uPrice" placeholder="Unit Price" value={form.unitPrice} onChange={e => onChange('unitPrice', e.target.value)} />
             </div>
-            <div className="col-4">
+            <div className="col-4 mt-auto">
               <label className="form-label fw-semibold" htmlFor="discount">Discount</label>
               <input className="form-control mb-2 bg-light bg-opacity-75 border border-secondary border-opacity-75"
               type="discount" placeholder="Discount" value={form.discount} onChange={e => onChange('discount', e.target.value)} />
             </div>
-            <div className="col-4">
+            <div className="col-4 mt-auto">
               <label className="form-label fw-semibold" htmlFor="quantity">Quantity</label>
               <input className="form-control mb-2 bg-light bg-opacity-75 border border-secondary border-opacity-75"
               type="quantity" placeholder="Quantity" value={form.quantity} onChange={e => onChange('quantity', e.target.value)} />
@@ -140,7 +140,7 @@ export default function Medicine() {
                 <td>{m.unitPrice - m.discount} Rs.</td>
                 <td>{m.quantity}</td>
                 <td>{m.expDate.slice(0, 10)}</td>
-                <td><button className="btn btn-sm btn-warning me-2" onClick={() => editMedicine(m)}><FaEdit className="mb-1 me-1"/>Edit</button>
+                <td><button className="btn btn-sm btn-warning mb-1 me-md-2 mb-md-0 px-1 px-md-2" onClick={() => editMedicine(m)}><FaEdit className="mb-1 me-1"/>Edit</button>
                   <button className="btn btn-sm btn-danger" onClick={() => deleteMedicine(m.id)}><FaTrash className="mb-1 me-1"/>Delete</button>
                 </td>
               </tr>
