@@ -17,12 +17,12 @@ export default function CustomerList() {
       <AdminHeader />
       <div className="container mt-3">
         <h3 className='text-center'><FaUsers className="mb-1 me-1" size={30}/>Customer List</h3>
-        {customers.length === 0 ? <div class="d-flex justify-content-center">
+        {customers.length === 0 ? <div class="d-flex justify-content-center table-responsive">
           <table className="table table-bordered text-center">
             <thead className="table-success"><tr><th>Name</th><th>Email</th><th>Joined</th></tr></thead>
             <tbody><tr><td colSpan={3}>No customer found</td></tr></tbody>
           </table></div> : (
-        <div class="d-flex justify-content-center">
+        <div class="d-flex justify-content-center table-responsive">
           <table className="table table-bordered text-center w-75">
             <thead className="table-success"><tr><th>Name</th><th>Email</th><th>Joined</th></tr></thead>
             <tbody>
