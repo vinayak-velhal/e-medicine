@@ -1,16 +1,152 @@
-# React + Vite
+# 📘 E-Medicine – Full-Stack Medicine Ordering Web Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack web application where customers can browse medicines, add items to cart, place orders, and admins can manage medicines.
+Built using React (Vercel) + ASP.NET Core Web API (Azure) + SQL Server (Azure Database).
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## React Compiler
+- Frontend (Vercel): https://e-medicine-system.vercel.app/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Backend API: Hosted on Microsoft Azure
+- Database: SQL Server on Azure  
 
-## Expanding the ESLint configuration
+---
+0
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+### Frontend (React)
+
+- React.js (Vite)
+
+- Bootstrap 5
+
+- Axios for API calls
+
+- React Icons
+
+- Hosted on Vercel
+
+### Backend (ASP.NET Core Web API)
+
+- C#
+
+- Entity Framework (or ADO.NET)
+
+- JWT Authentication (Login/Register)
+
+- Hosted on Azure App Service
+
+### Database
+
+- SQL Server
+
+- Stored Procedures
+
+- Hosted on Azure SQL Database  
+
+---
+
+## 📌 Features
+### 👤 Customer Module
+
+- View all available medicines
+
+- Search medicines
+
+- Check price, discount, manufacturer
+
+- Add items to cart
+
+- Quantity validation
+
+- Place orders
+
+- View order history
+
+### 🛒 Shopping Cart
+
+- Increase / decrease quantity
+
+- Automatic quantity validation
+
+- Stock availability checks
+
+- Prevents negative or invalid values
+
+### 🔑 Authentication
+
+- Customer Login
+
+- Admin Login
+
+- JWT-based authentication
+
+### 🧑‍⚕️ Admin Module
+
+- Add / Update / Delete medicines
+
+- Update quantity, price, discount
+
+- Upload medicine Image URL
+
+- View list of all medicines
+
+### 📦 Database
+
+- All medicines stored in SQL Server
+
+- All orders stored with total price
+
+- Stored procedures for efficiency
+
+## 📡 API Endpoints (Summary)
+### Auth
+
+- POST /User/login
+
+- POST /User/register
+
+### Customer
+
+- GET /Medicines/medicineList
+
+- POST /Medicines/addToCart
+
+- GET /Medicines/cartList
+
+- POST /Medicines/placeOrder
+
+### Admin
+
+- POST /Admin/addUpdateMedicine
+
+- POST /Admin/deleteMedicine
+
+- GET /Admin/orderList  
+
+---
+
+## 📷 Screenshots
+### Admin Dashboard
+![admin_dashboard](./public/admin_dashboard.png)
+### Medicine List
+![medicine_list](./public/medicine_list.png)
+### Order Management
+![order_management](./public/order_management.png)  
+### User Dashboard
+![user_dashboard](./public/user_dashboard.png)  
+### Product List
+![product_list](./public/product_list.png)
+### User Orders
+![user_orders](./public/user_orders.png) 
+
+---
+
+## 📬 Author
+Vinayak Velhal  
+
+---
+
+⭐ If you like this project, please give it a star!
