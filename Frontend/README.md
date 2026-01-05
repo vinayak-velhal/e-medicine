@@ -13,7 +13,6 @@ Built using React (Vercel) + ASP.NET Core Web API (Azure) + SQL Server (Azure Da
 - Database: SQL Server on Azure  
 
 ---
-0
 
 ## 🛠️ Tech Stack
 ### Frontend (React)
